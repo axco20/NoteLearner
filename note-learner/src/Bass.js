@@ -5,8 +5,8 @@ import { ReactSVG } from 'react-svg';
 const bassNotes = [
   { note: 'C2BASS', svg: '/BASSC2.svg' },    
   { note: 'D2BASS', svg: '/B3.svg' },    
-  { note: 'E2BASS', svg: '/C3.svg' },    
-  { note: 'F2BASS', svg: '/D3.svg' },    
+  { note: 'E2BASS', svg: '/C4.svg' },    
+  { note: 'F2BASS', svg: '/D4.svg' },    
   { note: 'G2BASS', svg: '/E4.svg' },   
   { note: 'A2BASS', svg: '/F4.svg' },   
   { note: 'B2BASS', svg: '/G4.svg' },   
@@ -17,7 +17,7 @@ const bassNotes = [
   { note: 'G3BASS', svg: '/E5.svg' }, 
   { note: 'A3BASS', svg: '/F5.svg' },    
   { note: 'B3BASS', svg: '/G5.svg' },   
-  { note: 'C4BASS', svg: '/C4.svg' },   
+  { note: 'C4BASS', svg: '/A5.svg' },   
 ];
 
 const getRandomNote = () => {

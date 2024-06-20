@@ -1,6 +1,10 @@
+// src/App.js
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import NewScreen from './SelectionScreen'; 
+import NewScreen from './SelectionScreen';
+import { analytics } from './firebase-config';
+import { logEvent } from "firebase/analytics";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('home');
@@ -12,16 +16,16 @@ function App() {
     audio.play();
     setTimeout(() => {
       setCurrentScreen('newScreen');
-    }, 1000); 
-
+    }, 1000);
   };
 
   useEffect(() => {
     if (currentScreen === 'newScreen') {
       setTimeout(() => {
         setTransitioning(false);
-      }, 3000); 
+      }, 3000);
     }
+    logEvent(analytics, 'page_view', { page_path: currentScreen });
   }, [currentScreen]);
 
   return (
